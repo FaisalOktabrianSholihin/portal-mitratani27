@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Mitratani</title>
+    <link rel="icon" href="logo-company.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="navbar-left">
+            <a href="#" class="nav-brand">
+                <img src="logo-company.png" alt="Logo" class="nav-logo">
+                <span class="nav-title">PORTAL MITRATANI</span>
+            </a>
+        </div>
+        <div class="search-container">
+            <input type="text" id="aplikasiSearch" placeholder="Cari Aplikasi..." class="search-input">
+            <i class="fas fa-search search-icon"></i>
+        </div>
+    </header>
+    <main class="hero-section">
+        <div class="hero-content">
+            <div class="illustration-container">
+                <img src="logo-company.png" alt="Ilustrasi atau Logo Perusahaan" class="illustration" width="250"
+                    height="auto">
+            </div>
+            <h1>Portal Mitratani </h1>
+            <p class="description">
+                Akses mudah dan terpusat untuk semua kebutuhan Anda sebagai Mitratani.<br>
+                Tingkatkan produktivitas dan kelola informasi dengan efisien.
+            </p>
+            <button class="btn-primary">Mulai Untuk Akses Mitratani</button>
+        </div>
+
+    </main>
+
+    <section class="aplikasi-grid-section">
+        <div class="aplikasi-grid">
+
+            <div class="aplikasi-card">
+                <img src="logo-sipas.png" alt="SIPAS Icon" class="aplikasi-icon">
+                <h3 class="aplikasi-title">SIPAS</h3>
+                <p class="aplikasi-subtitle">Sistem Informasi Persuratan</p>
+                <a href="https://m27.sipas.id/" class="btn-aplikasi-masuk"><i class="fas fa-arrow-right"></i> Masuk</a>
+            </div>
+
+            <div class="aplikasi-card">
+                <img src="logo-company.png" alt="CONNECT Icon" class="aplikasi-icon">
+                <h3 class="aplikasi-title">CONNECT</h3>
+                <p class="aplikasi-subtitle">Sistem Kemitraan</p>
+                <a href="https://connect.mitratani27.co.id/login" class="btn-aplikasi-masuk"><i
+                        class="fas fa-arrow-right"></i> Masuk</a>
+            </div>
+
+            <div class="aplikasi-card">
+                <img src="logo-company.png" alt="SIBUDI Icon" class="aplikasi-icon">
+                <h3 class="aplikasi-title">SIBUDI</h3>
+                <p class="aplikasi-subtitle">Sistem Monitoring Divisi Budidaya</p>
+                <a href="https://connect.mitratani27.co.id/login" class="btn-aplikasi-masuk"><i
+                        class="fas fa-arrow-right"></i>
+                    Masuk</a>
+            </div>
+
+            <div class="aplikasi-card">
+                <img src="logo-company.png" alt="SIMOLE Icon" class="aplikasi-icon">
+                <h3 class="aplikasi-title">SIMOLE</h3>
+                <p class="aplikasi-subtitle">Sistem Monitoring Legalitas Perusahaan</p>
+                <a href="#" class="btn-aplikasi-masuk"><i class="fas fa-arrow-right"></i> Masuk</a>
+            </div>
+
+            <div class="aplikasi-card">
+                <img src="logo-company.png" alt="SIBUTA Icon" class="aplikasi-icon">
+                <h3 class="aplikasi-title">SIBUTA</h3>
+                <p class="aplikasi-subtitle">Sistem Informasi Buku Tamu</p>
+                <a href="#" class="btn-aplikasi-masuk"><i class="fas fa-arrow-right"></i> Masuk</a>
+            </div>
+
+            <!-- <div class="aplikasi-card">
+                <img src="icon-dashboard.png" alt="Dashboard Stakeholder Icon" class="aplikasi-icon">
+                <h3 class="aplikasi-title">Dashboard Stakehol</h3>
+                <p class="aplikasi-subtitle">Aplikasi Monitoring Stakeholder Perusahaan</p>
+                <a href="#" class="btn-aplikasi-masuk"><i class="fas fa-arrow-right"></i> Masuk</a>
+            </div>
+
+            <div class="aplikasi-card">
+                <img src="icon-sikapi.png" alt="SIKAPI Icon" class="aplikasi-icon">
+                <h3 class="aplikasi-title">SIKAPI</h3>
+                <p class="aplikasi-subtitle">Aplikasi Monitoring KPI</p>
+                <a href="#" class="btn-aplikasi-masuk"><i class="fas fa-arrow-right"></i> Masuk</a>
+            </div>
+
+            <div class="aplikasi-card">
+                <img src="icon-superman.png" alt="SUPERMAN Icon" class="aplikasi-icon">
+                <h3 class="aplikasi-title">SUPERMAN</h3>
+                <p class="aplikasi-subtitle">Monitoring SPP</p>
+                <a href="#" class="btn-aplikasi-masuk"><i class="fas fa-arrow-right"></i> Masuk</a>
+            </div> -->
+
+        </div>
+    </section>
+
+    <footer class="footer-copyright">
+        <p>
+            &copy; 2025 PT. Mitratani27. Dikelola oleh Tim IT Superman.<br>
+            Semua Hak Cipta Dilindungi Undang-Undang.
+        </p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchInput = document.getElementById('aplikasiSearch');
+            const aplikasiCards = document.querySelectorAll('.aplikasi-card');
+
+            searchInput.addEventListener('keyup', function () {
+                const filter = searchInput.value.toLowerCase();
+
+                aplikasiCards.forEach(card => {
+
+                    const title = card.querySelector('.aplikasi-title').textContent.toLowerCase();
+                    const subtitle = card.querySelector('.aplikasi-subtitle').textContent.toLowerCase();
+
+
+                    if (title.includes(filter) || subtitle.includes(filter)) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
